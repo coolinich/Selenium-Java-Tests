@@ -3,15 +3,31 @@ package tests;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebElement;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import tests.model.User;
 
-public class SignIn extends pages.TestBase {
+import static org.testng.Assert.assertTrue;
+
+public class SignIn extends TestBase {
         private boolean acceptNextAlert = true;
         private StringBuffer verificationErrors = new StringBuffer();
 
+        @BeforeMethod
+        public void mayBeLogout(){
+            if (app.getUserHelper().isLoggedIn()){
+                app.getUserHelper().logout();
+            }
+        }
+
         @Test
-        public void testUntitled() throws Exception {    driver.get(baseUrl + "/");
+        public void testLoginOk() throws Exception {
+//            driver.get(baseUrl + "/");
+            User user = new User().setEmail("kristenreed1908@gmail.com").setPassword("Qwerty12");
+            app.getUserHelper().loginAs(user);
+            assertTrue(app.getUserHelper().isLoggedInAs(user));
+
+/*
             driver.findElement(By.linkText("Login")).click();
             WebElement loginEmail = driver.findElement(By.id("login_main_login"));
             loginEmail.clear();
@@ -20,6 +36,7 @@ public class SignIn extends pages.TestBase {
             loginPassword.clear();
             loginPassword.sendKeys("Qwerty12");
             driver.findElement(By.name("dispatch[auth.login]")).click();
+*/
         }
 
         private boolean isElementPresent(By by) {

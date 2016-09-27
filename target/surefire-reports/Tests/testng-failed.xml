@@ -5,14 +5,13 @@
   <test name="Test1(failed)">
     <parameter name="path" value="/"/>
     <classes>
-      <class name="tests.HomePageTest">
+      <class name="tests.SignIn">
         <methods>
-          <include name="testH1Existing"/>
           <include name="tearDown"/>
-          <include name="testInit"/>
+          <include name="testUntitled"/>
           <include name="init"/>
         </methods>
-      </class> <!-- tests.HomePageTest -->
+      </class> <!-- tests.SignIn -->
     </classes>
   </test> <!-- Test1(failed) -->
 </suite> <!-- Failed suite [Tests] -->

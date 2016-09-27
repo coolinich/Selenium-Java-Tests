@@ -3,13 +3,12 @@ package tests;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
-import org.testng.annotations.Test;
 
-public class SignUp extends pages.TestBase {
+public class SignUp extends TestBase {
     private boolean acceptNextAlert = true;
     private StringBuffer verificationErrors = new StringBuffer();
 
-    @Test
+    //@Test
     public void testSignUpHu2() throws Exception {    driver.findElement(By.id("email")).clear();
         driver.findElement(By.id("email")).sendKeys("kristenreed1908@gmail.com");
         driver.findElement(By.id("password1")).clear();
