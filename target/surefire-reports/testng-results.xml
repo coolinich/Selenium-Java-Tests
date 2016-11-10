@@ -2,24 +2,28 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Tests" duration-ms="8718" started-at="2016-09-24T17:48:58Z" finished-at="2016-09-24T17:49:07Z">
+  <suite name="Tests" duration-ms="10432" started-at="2016-11-10T08:39:13Z" finished-at="2016-11-10T08:39:23Z">
     <groups>
     </groups>
-    <test name="Test1" duration-ms="8718" started-at="2016-09-24T17:48:58Z" finished-at="2016-09-24T17:49:07Z">
-      <class name="tests.SignIn">
-        <test-method status="PASS" signature="init()[pri:0, instance:tests.SignIn@511baa65]" name="init" is-config="true" duration-ms="3414" started-at="2016-09-24T20:48:58Z" finished-at="2016-09-24T20:49:01Z">
+    <test name="Test1" duration-ms="10432" started-at="2016-11-10T08:39:13Z" finished-at="2016-11-10T08:39:23Z">
+      <class name="core.frame.SignIn">
+        <test-method status="PASS" signature="init()[pri:0, instance:core.frame.SignIn@67b64c45]" name="init" is-config="true" duration-ms="10410" started-at="2016-11-10T10:39:13Z" finished-at="2016-11-10T10:39:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="testUntitled()[pri:0, instance:tests.SignIn@511baa65]" name="testUntitled" duration-ms="5287" started-at="2016-09-24T20:49:01Z" finished-at="2016-09-24T20:49:07Z">
+        <test-method status="PASS" signature="testLoginOk()[pri:0, instance:core.frame.SignIn@67b64c45]" name="testLoginOk" duration-ms="2" started-at="2016-11-10T10:39:23Z" finished-at="2016-11-10T10:39:23Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testUntitled -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:tests.SignIn@511baa65]" name="tearDown" is-config="true" duration-ms="3481" started-at="2016-09-24T20:49:07Z" finished-at="2016-09-24T20:49:10Z">
+        </test-method> <!-- testLoginOk -->
+        <test-method status="PASS" signature="mayBeLogout()[pri:0, instance:core.frame.SignIn@67b64c45]" name="mayBeLogout" is-config="true" duration-ms="0" started-at="2016-11-10T10:39:23Z" finished-at="2016-11-10T10:39:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mayBeLogout -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:core.frame.SignIn@67b64c45]" name="tearDown" is-config="true" duration-ms="6966" started-at="2016-11-10T10:39:24Z" finished-at="2016-11-10T10:39:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- tests.SignIn -->
+      </class> <!-- core.frame.SignIn -->
     </test> <!-- Test1 -->
   </suite> <!-- Tests -->
 </testng-results>

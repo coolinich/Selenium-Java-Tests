@@ -1,1 +1,4 @@
-tests\TestBase.class
+core\frame\pages\TestBase.class
+core\frame\SignIn.class
+core\frame\SignUp.class
+core\frame\HomePageTest.class
