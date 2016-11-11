@@ -7,6 +7,7 @@ import core.frame.applogic.NavigationHelper;
  */
 public class NavigationHelper0 implements NavigationHelper {
     //private Navigate navigate;
-
+    @Override
+    public void openMainPage(){}
 
 }

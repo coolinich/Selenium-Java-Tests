@@ -21,7 +21,7 @@ public class ApplicationManager1 implements ApplicationManager {
     private WebDriver driver;
     private UserHelper userHelper;
     private ProductHelper productHelper;
-    private NavigationHelper navigationHelper;
+    private NavigationHelper navHelper;
 
     public ApplicationManager1()
     {
@@ -38,24 +38,11 @@ public class ApplicationManager1 implements ApplicationManager {
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         //driver.get(baseUrl + "/");
 
-        userHelper = new UserHelper1();
+        userHelper = new UserHelper1(this);
         productHelper = new ProductHelper1(this);
-        navigationHelper = new NavigationHelper1();
-//        DesiredCapabilities capabilities = new DesiredCapabilities();
-//        capabilities.setBrowserName(PropertyLoader.loadProperty("browser.name"));
-//        capabilities.setVersion(PropertyLoader.loadProperty("browser.version"));
- //       String platform = PropertyLoader.loadProperty("browser.platform");
- ///       if (!(null == platform || "".equals(platform))) {
-  //          capabilities.setPlatform(Platform.valueOf(PropertyLoader.loadProperty("browser.platform")));
-   //     }
-/*
+        navHelper = new NavigationHelper1(this);
 
-        if (!(null == gridHubUrl || "".equals(gridHubUrl))) {
-            driver = WebDriverFactory.getDriver(gridHubUrl, capabilities);
-        } else {
-            driver = WebDriverFactory.getDriver(capabilities);
-        }
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); */
+        getNavigationHelper().openMainPage();
     }
 
     @Override
@@ -69,11 +56,15 @@ public class ApplicationManager1 implements ApplicationManager {
     }
 
     @Override
-    public NavigationHelper getNavigationHelper() {return  navigationHelper; }
+    public NavigationHelper getNavigationHelper() {return  navHelper; }
 
     @Override
     public void gotoStaticUrl() {driver.get(baseUrl + "/");}
 
     @Override
-    public WebDriver getDriver() { return driver; };
+    public WebDriver getDriver() { return driver; }
+
+    public String getBaseUrl() { return baseUrl; }
+
+
 }
