@@ -8,6 +8,7 @@ import core.frame.util.Browser;
 import core.frame.util.PropertyLoader;
 import core.frame.webdriver.WebDriverFactory;
 import org.openqa.selenium.WebDriver;
+import java.io.*;
 
 import java.util.concurrent.TimeUnit;
 
@@ -23,8 +24,7 @@ public class ApplicationManager1 implements ApplicationManager {
     private ProductHelper productHelper;
     private NavigationHelper navHelper;
 
-    public ApplicationManager1()
-    {
+    public ApplicationManager1() throws InterruptedException {
         baseUrl = PropertyLoader.loadProperty("site.url");
         String gridHubUrl = PropertyLoader.loadProperty("grid2.hub");
 
@@ -42,7 +42,10 @@ public class ApplicationManager1 implements ApplicationManager {
         productHelper = new ProductHelper1(this);
         navHelper = new NavigationHelper1(this);
 
+        driver.manage().window().maximize();
         getNavigationHelper().openMainPage();
+  //      driver.manage().wait(1000);
+        getNavigationHelper().acceptCookiesPopup();
     }
 
     @Override
@@ -56,15 +59,34 @@ public class ApplicationManager1 implements ApplicationManager {
     }
 
     @Override
-    public NavigationHelper getNavigationHelper() {return  navHelper; }
+    public NavigationHelper getNavigationHelper() { return  navHelper; }
 
     @Override
-    public void gotoStaticUrl() {driver.get(baseUrl + "/");}
+    public void gotoStaticUrl() { driver.get(baseUrl + "/");}
 
     @Override
     public WebDriver getDriver() { return driver; }
 
     public String getBaseUrl() { return baseUrl; }
 
+    public void saveTestResult(String result, String resfile)
+    {
+        try {
+            File f1 = new File(resfile);
+            if(!f1.exists()) {
+                f1.createNewFile();
+            }
+            FileWriter fileWritter = new FileWriter(f1.getName(),true);
+            BufferedWriter bw = new BufferedWriter(fileWritter);
+            bw.newLine();
+            bw.write(result);
+            bw.newLine();
+            bw.close();
+           // System.out.println("Done");
+            } catch(IOException e){
+            e.printStackTrace();
+        }
+
+    }
 
 }

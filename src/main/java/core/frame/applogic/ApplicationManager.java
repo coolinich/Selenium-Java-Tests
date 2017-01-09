@@ -11,4 +11,6 @@ public interface ApplicationManager {
     NavigationHelper getNavigationHelper();
     void gotoStaticUrl();
     WebDriver getDriver();
+
+    void saveTestResult(String result, String s);
 }

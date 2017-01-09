@@ -144,8 +144,8 @@
         <user.username></user.username>
         <user.password></user.password>
         <grid2.hub></grid2.hub>
-        <site.url>https://www.hu2.com</site.url>
-        <browser.name>chrome</browser.name>
+        <site.url>https://www.tele2.nl/</site.url>
+        <browser.name>firefox</browser.name>
         <browser.version></browser.version>
         <browser.platform></browser.platform>
       </properties>
@@ -160,7 +160,7 @@
         <user.username></user.username>
         <user.password></user.password>
         <grid2.hub></grid2.hub>
-        <site.url>https://www.hu2.com</site.url>
+        <site.url>https://www.tele2.nl/</site.url>
         <browser.name>firefox</browser.name>
         <browser.version></browser.version>
         <browser.platform></browser.platform>
@@ -173,7 +173,7 @@
         <user.username></user.username>
         <user.password></user.password>
         <grid2.hub></grid2.hub>
-        <site.url>https://www.hu2.com</site.url>
+        <site.url>https://www.tele2.nl/</site.url>
         <browser.name>ie</browser.name>
         <browser.version></browser.version>
         <browser.platform></browser.platform>
@@ -186,7 +186,7 @@
         <user.username></user.username>
         <user.password></user.password>
         <grid2.hub></grid2.hub>
-        <site.url>https://www.hu2.com</site.url>
+        <site.url>https://www.tele2.nl/</site.url>
         <browser.name>firefox</browser.name>
         <browser.version></browser.version>
         <browser.platform></browser.platform>
@@ -196,7 +196,7 @@
       <id>force-local-driver</id>
       <properties>
         <grid2.hub></grid2.hub>
-        <site.url>https://www.hu2.com</site.url>
+        <site.url>https://www.tele2.nl/</site.url>
         <browser.name>firefox</browser.name>
         <browser.version></browser.version>
         <browser.platform></browser.platform>

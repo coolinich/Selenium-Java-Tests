@@ -34,7 +34,12 @@ public class ApplicationManager0 implements ApplicationManager {
     public void gotoStaticUrl() {}
 
     @Override
-    public WebDriver getDriver() { return driver; };
+    public WebDriver getDriver() { return driver; }
+
+    @Override
+    public void saveTestResult(String result, String s) { }
+
+    ;
 
     //public NavigationHelper getNavigationHelper() {
     //    return navigationHelper;

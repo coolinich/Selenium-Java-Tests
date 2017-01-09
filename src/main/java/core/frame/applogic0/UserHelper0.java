@@ -34,4 +34,9 @@ public class UserHelper0 implements UserHelper {
     public boolean isNotLoggedIn() {
         return (user == null);
     }
+
+    @Override
+    public User createUserFromFile(User newUser, String fileName) {
+        return newUser;
+    }
 }

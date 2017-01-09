@@ -5,6 +5,17 @@ package core.frame.applogic;
  */
 public interface NavigationHelper {
     void openMainPage();
+
+    void openCatalogPage();
+
+    void acceptCookiesPopup();
+
+    void openHSPage(String brand);
+
+    void openHSPage();
+
+    void openSOPage();
+
     //public void gotoUrl();
 }
 

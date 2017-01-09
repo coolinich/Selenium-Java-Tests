@@ -10,4 +10,29 @@ public class NavigationHelper0 implements NavigationHelper {
     @Override
     public void openMainPage(){}
 
+    @Override
+    public void openCatalogPage() {
+
+    }
+
+    @Override
+    public void acceptCookiesPopup() {
+
+    }
+
+    @Override
+    public void openHSPage(String brand) {
+
+    }
+
+    @Override
+    public void openHSPage() {
+
+    }
+
+    @Override
+    public void openSOPage() {
+
+    }
+
 }

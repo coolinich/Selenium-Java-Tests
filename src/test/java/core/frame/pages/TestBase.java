@@ -14,9 +14,10 @@ public class TestBase {
 	protected ApplicationManager app;
 
 	@BeforeClass
-	public void init() {
+	public void init() throws InterruptedException {
 		app = new ApplicationManager1();
-		app.getNavigationHelper().openMainPage();
+	//	app.getNavigationHelper().openMainPage();
+	//	app.getNavigationHelper().acceptCookiesPopup();
 
 	}
 

@@ -11,4 +11,5 @@ public interface UserHelper {
     boolean isLoggedIn();
     boolean isLoggedInAs(User user);
     boolean isNotLoggedIn();
+    User createUserFromFile(User newUser, String fileName);
 }
